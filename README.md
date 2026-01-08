@@ -1,7 +1,8 @@
 # fast_size
-compiling
+# compiling
 nasm -f elf64 fast_size.asm
 ld -o fast_du fast_size.o
+
 # du_x64_extreme
 
 Pure x86_64 Linux assembly disk usage tool.
@@ -13,6 +14,6 @@ Pure x86_64 Linux assembly disk usage tool.
 - Zero dynamic allocation
 - Syscall-only (no libc)
 
-## Build
-```bash
-./build.sh
+## compiling
+nasm -f elf64 du_x64_extreme.asm
+ld -O2 -o du_x64_extreme du_x64_extreme.o
